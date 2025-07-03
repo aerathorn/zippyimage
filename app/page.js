@@ -33,27 +33,29 @@ export default function HomePage() {
       <input type="file" accept="image/*" onChange={upload} />
       {loading && <p>🔄 Compressing...</p>}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-        {image && (
-          <div>
-            <h2 className="font-semibold">Original Image ({originalSize} KB)</h2>
-            <img src={image} alt="Original" className="border max-w-xs mt-2" />
-          </div>
-        )}
-        {compressed && (
-          <div>
-            <h2 className="font-semibold">Compressed Image ({compressedSize} KB)</h2>
-            <img src={compressed} alt="Compressed" className="border max-w-xs mt-2" />
-            <a
-              href={compressed}
-              download="compressed.png"
-              className="inline-block mt-2 text-blue-600 underline"
-            >
-              ⬇️ Download Compressed
-            </a>
-          </div>
-        )}
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 w-full max-w-4xl">
+  {image && (
+    <div>
+      <h2 className="font-semibold mb-2">Original Image ({originalSize} KB)</h2>
+      <img src={image} alt="Original" className="border rounded max-w-full" />
+    </div>
+  )}
+
+  {compressed && (
+    <div>
+      <h2 className="font-semibold mb-2">Compressed Image ({compressedSize} KB)</h2>
+      <img src={compressed} alt="Compressed" className="border rounded max-w-full" />
+      <a
+        href={compressed}
+        download="compressed.png"
+        className="inline-block mt-2 text-blue-600 underline"
+      >
+        ⬇️ Download Compressed
+      </a>
+    </div>
+  )}
+</div>
+
 
       <div className="mt-6 w-full max-w-xl text-center border-t pt-4 text-gray-500">
         [Ad space here – connect Google AdSense]
@@ -61,3 +63,4 @@ export default function HomePage() {
     </main>
   );
 }
+																																																																									
