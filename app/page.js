@@ -61,9 +61,20 @@ export default function HomePage() {
           </div>
         )}
 
-        <div className="mt-12 w-full max-w-2xl text-center border-t pt-6 text-gray-500 text-sm">
-          [ Google AdSense space here – integrate ad code when ready ]
-        </div>
+        <div className="mt-12 w-full max-w-2xl text-center border-t pt-6">
+  <ins
+    className="adsbygoogle"
+    style={{ display: 'block', textAlign: 'center' }}
+    data-ad-client="ca-pub-8929411914632480"
+    data-ad-slot="5843447441"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+  ></ins>
+  <script>
+    {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+  </script>
+</div>
+
       </div>
     </main>
   );
